@@ -8,10 +8,9 @@ class Navbar extends Component {
     const { account } = this.props
     return (
       <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-        <a
+        <a onClick={() => window.location.reload({forcedUpdate: false})}
           className="navbar-brand col-sm-3 col-md-2 mr-0"
           href="#"
-          target="_blank"
           rel="noopener noreferrer"
         >
           <img src={photo} width="30" height="30" className="d-inline-block align-top" alt="" />

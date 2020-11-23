@@ -17,6 +17,11 @@ class App extends Component {
     this.loadBlockchainData()
   }
 
+  refreshView () {
+    this.loadBlockchainData();
+    window.location.reload({forcedReload: false})
+  }
+
   //Import web3 to connect our browser to the Ethereum blockchain
   async loadWeb3 () {
     if(window.ethereum) {
@@ -108,6 +113,7 @@ class App extends Component {
     .on('transactionHash', (hash) => {
       this.setState({ loading: false })
     })
+
   }
 
   constructor(props) {
@@ -131,6 +137,7 @@ class App extends Component {
             tipImageOwner={this.tipImageOwner}
             captureFile={this.captureFile}
             uploadImage={this.uploadImage}
+            refreshView={this.refreshView}
             />
           }
       </div>

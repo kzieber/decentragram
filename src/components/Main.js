@@ -28,6 +28,7 @@ class Main extends Component {
                         required />
                   </div>
                 <button type="submit" className="btn btn-primary btn-block btn-lg">Upload!</button>
+                <button className="btn btn-success btn-block btn-lg" onClick={() => window.location.reload({ forcedUpdate: false })}>Load New Pics!</button>
               </form>
               <p>&nbsp;</p>
               { this.props.images.map((image, key) => {
