@@ -80,11 +80,11 @@ class App extends Component {
     }
   }
 
-  uploadImage = description => {
+  uploadImage = async (description) => {
     console.log('Submitting this image to ipfs...')
 
     //add file to the IPFS
-    ipfs.add(this.state.buffer, (err, result) => {
+    await ipfs.add(this.state.buffer, (err, result) => {
       console.log('Ipfs result', result)
       if (err) {
         console.error(err)
@@ -100,6 +100,7 @@ class App extends Component {
       })
     })
   }
+
 
   tipImageOwner = (id, tipAmount) => {
     this.setState({ loading: true })
