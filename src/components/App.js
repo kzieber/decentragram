@@ -113,7 +113,6 @@ class App extends Component {
     .on('transactionHash', (hash) => {
       this.setState({ loading: false })
     })
-
   }
 
   constructor(props) {
